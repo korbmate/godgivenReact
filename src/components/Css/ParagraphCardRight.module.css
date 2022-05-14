@@ -1,0 +1,101 @@
+.container {
+    margin: 10vh 0 35vh 0;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw 0 5vw;
+}
+
+.para {
+    color: white;
+    width: 70vw;
+    display: flex;
+    background-color: rgba(4, 47, 57, 0.5);
+    padding: 5vh 2vw 5vh 2vw;
+    transform: translateX(-2vw);
+    z-index: 2;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.picture {
+    display: flex;
+    max-width: 35vw;
+    z-index: 5;
+    border-radius: 50%;
+}
+.decor01{
+    width: 35vw;
+    height: 35vw;
+    background-color: #5DD6F4;
+    position: absolute;
+    transform: translateX(60vw);
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
+}
+
+.decor02{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 300px solid #009AAC;
+    transform: translateX(40vw) rotateZ(50deg);
+}
+
+.decor03{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid #349B89;
+    transform: translateX(20vw) translateY(-10vh) rotateZ(15deg);
+}
+
+.decor04{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 400px solid #7A89C5;
+    transform: translateX(-10vw) translateY(10vh) rotateZ(15deg);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        margin: 10vh 0 10vh 0;
+    }
+    .decor01{
+        width: 80vw;
+        height: 75vw;
+        transform: translateY(450px);
+    }
+    .para {
+        width: 80vw;
+        padding: 2vh 2vw 2vh 2vw;
+        transform: translateX(0);
+        box-shadow: 0 0 black;
+        text-align: justify;
+        border-radius: 5px;
+    }
+    .picture {
+        max-width: 80vw;
+        margin-top: 10vh;
+    }
+    .decor02{
+        transform: translateX(-20vw) rotateZ(35deg) translateY(-40vh);
+    }
+    .decor03{
+        transform: translateX(0vw) translateY(70vh) rotateZ(15deg);
+        visibility: hidden;
+    }
+    .decor04{
+        transform: translateX(10vw) translateY(80vh) rotateZ(30deg);
+        visibility: hidden;
+    }
+  }

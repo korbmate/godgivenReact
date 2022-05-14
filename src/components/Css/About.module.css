@@ -1,0 +1,63 @@
+.topImage {
+    margin-bottom: 10vh;
+}
+
+.backgroundPicture{
+    background-image: url('../Pictures/us/IMG_3339-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center -25px;
+    background-size: 100%;
+    width: 100vw;
+    height: 30vw;
+    align-content: center;
+    visibility: hidden;
+    animation: backgroundPictureAnim 3s 2s ease-in forwards;
+    z-index: -2;
+}
+
+.mask01 {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: 30vw;
+    background-image: linear-gradient( rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0), black);
+    transform: translateY(-30vw);
+    padding-bottom: 1px;
+}
+
+.content {
+    visibility: hidden;
+    animation: contentAnim 1s 2s ease-in forwards;
+    transform: translateY(-30vh);
+    overflow: hidden;
+    font-weight: 100;
+}
+
+
+@keyframes backgroundPictureAnim {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes contentAnim {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        transform: translateY(-15vh);
+    }
+}

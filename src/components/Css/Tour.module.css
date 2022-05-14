@@ -1,0 +1,32 @@
+.cont {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: center;
+}
+
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 10vh;
+    background-color: #075264;
+    display: inline-block;
+    line-height: 10vh;
+    padding: 2vh 2vw 1vh 2vw;
+    border-radius: 5px;
+    max-width: 80vw;
+    opacity: 0;
+    animation: fadeInAnim 2s ease-in-out forwards;
+    text-align: center;
+}
+
+@keyframes fadeInAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

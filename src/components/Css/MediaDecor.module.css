@@ -1,0 +1,157 @@
+.decorDiv{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -100;
+    opacity: 0;
+    animation: transpAnim 3s 1s ease-in-out forwards;
+}
+.decor01{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 400px solid #7A89C5;
+    transform: translateX(0vw) translateY(10vh) rotateZ(15deg);
+    animation: triangAnim01 10s ease-in-out infinite;
+}
+.decor02{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-bottom: 300px solid #009AAC;
+    transform: translateX(100vw) rotateZ(50deg) translateY(70vh);
+    animation: triangAnim02 10s ease-in-out infinite;
+}
+
+.decor03{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid #349B89;
+    transform: translateX(80vw) translateY(0vh) rotateZ(15deg);
+    animation: triangAnim03 10s ease-in-out infinite;
+}
+.decor04{
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 250px solid transparent;
+	border-right: 250px solid transparent;
+	border-bottom: 500px solid #AA7CB0;
+    transform: translateX(35vw) translateY(-15vh) rotateZ(40deg);
+    animation: triangAnim04 10s ease-in-out infinite;
+}
+
+@keyframes transpAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes triangAnim01 {
+    0%{
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-bottom: 400px solid #7A89C5;
+        transform: translateX(0vw) translateY(10vh) rotateZ(15deg);
+    }
+    50%{
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-bottom: 400px solid #349B89;
+        transform: translateX(0vw) translateY(0vh) rotateZ(10deg);
+    }
+    100%{
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
+        border-bottom: 400px solid #7A89C5;
+        transform: translateX(0vw) translateY(10vh) rotateZ(15deg);
+    }
+}
+
+@keyframes triangAnim02{
+    0%{
+        border-left: 150px solid transparent;
+	    border-right: 150px solid transparent;
+	    border-bottom: 300px solid #009AAC;
+        transform: translateX(100vw) rotateZ(50deg) translateY(70vh);
+    }
+    50%{
+        border-left: 170px solid transparent;
+        border-right: 140px solid transparent;
+        border-bottom: 280px solid #AA7CB0;
+        transform: translateX(70vw) rotateZ(-20deg) translateY(50vh);
+    }
+    100%{
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-bottom: 300px solid #009AAC;
+        transform: translateX(100vw) rotateZ(50deg) translateY(70vh);
+    }
+}
+
+@keyframes triangAnim03 {
+    0%{
+        border-left: 100px solid transparent;
+	    border-right: 100px solid transparent;
+	    border-bottom: 200px solid #349B89;
+        transform: translateX(80vw) translateY(0vh) rotateZ(15deg);
+    }
+    50%{
+        border-left: 90px solid transparent;
+        border-right: 110px solid transparent;
+        border-bottom: 220px solid #7A89C5;
+        transform: translateX(80vw) translateY(0vh) rotateZ(45deg);
+    }
+    100%{
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 200px solid #349B89;
+        transform: translateX(80vw) translateY(0vh) rotateZ(15deg);
+    }
+}
+
+@keyframes triangAnim04{
+    0%{
+        border-left: 250px solid transparent;
+	    border-right: 250px solid transparent;
+	    border-bottom: 500px solid #AA7CB0;
+        transform: translateX(35vw) translateY(-15vh) rotateZ(40deg);
+    }
+    50%{
+        border-left: 260px solid transparent;
+	    border-right: 240px solid transparent;
+	    border-bottom: 480px solid #009AAC;
+        transform: translateX(30vw) translateY(-10vh) rotateZ(90deg);
+    }
+    100%{
+        border-left: 250px solid transparent;
+	    border-right: 250px solid transparent;
+	    border-bottom: 500px solid #AA7CB0;
+        transform: translateX(35vw) translateY(-15vh) rotateZ(40deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .decor01{
+        transform: translateX(-10vw) translateY(-10vh) rotateZ(15deg);
+    }
+    .decor02{
+        transform: translateX(120vw) rotateZ(50deg) translateY(70vh);
+    }
+    .decor03{
+        transform: translateX(70vw) translateY(-10vh) rotateZ(15deg);
+    }
+    .decor04{
+        visibility: hidden;
+    }
+}

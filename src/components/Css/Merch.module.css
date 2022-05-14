@@ -1,0 +1,49 @@
+.container{
+    animation: fadeInAnim 2s 2.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+.titleCont{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15vh;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 10vh;
+    background-color: #075164e7;
+    display: inline-block;
+    line-height: 10vh;
+    padding: 2vh 2vw 1vh 2vw;
+    border-radius: 5px;
+    max-width: 80vw;
+    text-align: center;
+}
+
+@keyframes fadeInAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cont{
+        flex-direction: column;
+        margin-top: 15vh;
+    }
+    .titleCont{
+        margin-top: 10vh;
+    }
+}

@@ -1,0 +1,135 @@
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-20vh);
+}
+
+.titleFrom, .titlePartYellow, .titlePartDied, .box01{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 5VW;
+    background-color: #10BBE5;
+    display: inline-block;
+    line-height: 10vw;
+    height: 10vw;
+    padding: 0 2vw 0 2vw;
+    border-radius: 5px;
+}
+
+.titleFrom{
+    color: #042F39;
+    transform: translateY(3vw) translateX(-100vw);
+    z-index: -1;
+    font-weight: 100;
+    box-shadow: 10px 10px #0A758F;
+    animation:  fromAnim 2s 2s ease-in-out forwards;
+}
+.titlePartRnR{
+    color:  white;
+    background-color: #042F39;
+    line-height: 10vw;
+    font-size: 5VW;
+    padding: 0 1vw 0 1vw;
+    animation:  rnrAnim 2s 2s ease-in-out forwards;
+    border-radius: 5px;
+    font-weight: 900;
+    transform: translateX(100vw);
+}
+
+.titlePartDied{
+    color: white;
+    height: 8vw;
+    width: 20vw;
+    text-align: center;
+    line-height: 8vw;
+    font-size: 5vw;
+    background-color: #0A758F;
+    transform: translateY(-2vw) translateX(-100vw);
+    animation:  diedAnim 2s 2s ease-in-out forwards;
+    border-radius: 5px 5px 0 0;
+    font-weight: 100;
+}
+
+.box01{
+    color: #10BBE5;
+    z-index: -1;
+    transform: translateY(-12vw) translateX(-100vw);
+    box-shadow: 10px 10px #0A758F;
+    animation:  box01Anim 2s 2s ease-in-out forwards;
+    
+}
+
+@keyframes box01Anim {
+    0%{
+        transform: translateY(-12vw) translateX(-100vw);
+    }
+    100%{
+        transform: translateY(-12vw) translateX(0);
+    }
+}
+
+@keyframes fromAnim {
+    0%{
+        transform: translateY(3vw) translateX(-100vw);
+    }
+    100%{
+        transform: translateY(3vw) translateX(0);
+    }
+}
+@keyframes rnrAnim {
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes diedAnim {
+    0%{
+        transform: translateY(-2vw) translateX(-100vw);
+    }
+    100%{
+        transform: translateY(-2vw) translateX(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        transform: translateY(-10vh);
+    }
+    .titleFrom, .titlePartYellow, .titlePartDied, .box01{
+        font-size: 8VW;
+        line-height: 11vw;
+        height: 12vw;
+    }
+    .titlePartRnR{
+        line-height: 11vw;
+        font-size: 8VW;
+    }
+    .titlePartDied{
+        width: 30vw;
+        height: 11vw;
+        line-height: 13vw;
+        font-size: 11vw;
+        border-radius: 5px 5px 0 0;
+        font-weight: 100;
+    }
+    @keyframes box01Anim {
+        0%{
+            transform: translateY(-12vw) translateX(-100vw);
+        }
+        100%{
+            transform: translateY(-15vw) translateX(0);
+        }
+    }
+    @keyframes diedAnim {
+        0%{
+            transform: translateY(-2vw) translateX(-100vw);
+        }
+        100%{
+            transform: translateY(-1vw) translateX(0);
+        }
+    }
+}

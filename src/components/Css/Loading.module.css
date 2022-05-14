@@ -1,0 +1,98 @@
+.container {
+    color: white;
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    height: 90vh;
+    width: 100vw;
+    opacity: 1;
+    animation: fadeOut 1s 1s ease-in-out forwards;
+    visibility: visible;
+}
+
+.triangle01{
+    position: flex;
+    width: 0;
+	height: 0;
+	border-left: 10vh solid transparent;
+	border-right: 10vh solid transparent;
+	border-bottom: 15vh solid #349B89;
+    transform: translateX(15vh) rotateZ(0);
+    animation: rotateAnim01 1.25s linear infinite;
+}
+.triangle02{
+    position: flex;
+    width: 0;
+	height: 0;
+	border-left: 7.5vh solid transparent;
+	border-right: 7.5vh solid transparent;
+	border-bottom: 15vh solid #7A89C5;
+    transform:  translateX(-15vh) translateY(0);
+    animation: rotateAnim02 1s linear infinite;
+}
+
+.triangle03{
+    position: flex;
+    width: 0;
+	height: 0;
+	border-left: 15vh solid transparent;
+	border-right: 15vh solid transparent;
+	border-bottom: 30vh solid #0D98BA;
+    transform: translateY(0);
+    animation: rotateAnim03 1s linear infinite;
+}
+.triangleCont{
+    display: flex;
+    justify-content: center;
+}
+
+.titleCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
+.title{
+    z-index: 10;
+}
+
+@keyframes rotateAnim01 {
+    0%{
+        transform: translateX(15vh) rotateZ(0);
+    }
+    100%{
+        transform: translateX(15vh) rotateZ(360deg);
+    }
+    
+}
+
+@keyframes rotateAnim02 {
+    0%{
+        transform: translateX(-15vh) rotateZ(0);
+    }
+    100%{
+        transform: translateX(-15vh) rotateZ(-360deg);
+    }
+    
+}
+
+@keyframes rotateAnim03 {
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }  
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

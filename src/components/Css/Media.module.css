@@ -1,0 +1,51 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+.contOut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.spoty{
+    display: flex;
+    animation: spotyAnim 3s 0.5s ease-in-out forwards;
+    z-index: -5;
+    opacity: 0;
+}
+
+.youtube{
+    display: flex;
+    animation: youtubeAnim 3s 0.5s ease-in-out forwards;
+    z-index: -5;
+    opacity: 0;
+}
+
+@keyframes spotyAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes youtubeAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cont{
+        width: 80%;
+    }
+}

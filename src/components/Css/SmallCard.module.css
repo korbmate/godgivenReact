@@ -1,0 +1,54 @@
+.pictureFront, .pictureBack {
+    max-height: 50vh;
+    max-width: 20vw;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.picDiv{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-weight: 100;
+    background-color: #075164e7;
+    padding: 1vh 1vw 0vh 1vw;
+    border-radius: 5px;
+    font-size: 8vh;
+    line-height: 8vh;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 0 10vh 0;
+    animation: fadeInAnim 2s 2.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .picDiv{
+        flex-direction: column;
+    }
+    .pictureFront, .pictureBack {
+        max-height: 70vh;
+        max-width: 80vw;
+        border-radius: 5px;
+        margin: 5px;
+    }
+}

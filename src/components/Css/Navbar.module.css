@@ -1,0 +1,79 @@
+.navBar {
+    list-style: none;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 100;
+    font-size: 1rem;
+    background-color: black;
+    padding: 0;
+    z-index: 500;
+}
+.navItem, :visited {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #dff8ff;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: space-around;
+    height: 10vh;
+    line-height: 10vh;
+    width: 40vw;
+    text-align: center;
+    background-color: black;
+    z-index: 500;
+}
+
+.line{
+    height: 4vh;
+    width: 1px;
+    background-image: linear-gradient(black, rgb(130, 130, 130), black);
+    z-index: 500;
+}
+
+.navItem :hover {
+    animation: navItemHoverAnim 0.3s ease-in-out forwards;
+    background-color: black;
+}
+
+.navButton{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #dff8ff;
+    background-color: black;
+    border: none;
+    width: 100vw;
+    height: 10vh;
+    line-height: 10vh;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+@keyframes navItemHoverAnim {
+    0%{
+        font-size: 1rem;
+        color: #dff8ff;
+    }
+    100%{
+        font-size: 1.3rem;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .navBar{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: black;
+    }
+    .line{
+        display: inline-block;
+        height: 1px;
+        width: 100vw;
+        z-index: 50;
+        background-image: linear-gradient(to right, black, rgb(130, 130, 130), black);
+    }
+    .navItem, :visited {
+        width: 100vw;
+    }
+}
